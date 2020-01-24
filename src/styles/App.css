@@ -1,11 +1,87 @@
+.body {
+  font-family: Brandon ",Arial,sans-serif";
+  color: inherit;
+}
 .img {
   position: absolute;
-  top: 30%;
-  left: 70%;
+  top: 3%;
+  left: 40%;
+  width: 20%;
+  height: 20%;
 }
 .img-1 {
   position: absolute;
-  top: 20%;
-  left: 0%;
+  top: 23%;
+  right: 10%;
+}
+.winner {
+  position: absolute;
+  left: 30%;
+  top: 2%;
+}
+.winner-content {
+  position: absolute;
+  border: hotpink;
+  padding: 30px;
+  width: 230px;
+  text-align: center;
+  margin: 40px;
+  border-radius: 20px;
+  background-color: hotpink;
+  color: white;
+  font: larger;
+  font-weight: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  top: 60%;
+  left: 463px;
 }
 
+.game-over {
+  position: absolute;
+  border:rgba(255, 0, 0, 0.87);
+  padding: 30px;
+  width: 230px;
+  text-align: center;
+  margin: 40px;
+  border-radius: 20px;
+  background-color: rgba(255, 0, 0, 0.87);
+  color: white;
+  font: larger;
+  font-weight: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  top: 30%;
+  left: 453px;
+  
+}
+.timer{
+  position: absolute;
+  position: absolute;
+  border:rgba(255, 0, 0, 0.87);
+  padding: 30px;
+  width: 230px;
+  text-align: center;
+  margin: 40px;
+  border-radius: 20px;
+  background-color: rgba(255, 0, 0, 0.87);
+  color: white;
+  font: larger;
+  font-weight: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  top: 30%;
+  left: 453px;
+}
+
+@media only screen and (min-width: 600px) {
+  .img {
+    position: absolute;
+    top: 20%;
+    left: 40%;
+    width: 20%;
+    height: 40%;
+  }
+}
+.button {
+  position: relative;
+  top: 250px;
+  left: 0px;
+}

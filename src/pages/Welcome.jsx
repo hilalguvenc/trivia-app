@@ -1,8 +1,9 @@
 import React, { Fragment, useState, useEffect } from "react";
-import { createCookie, readCookie } from "@mehmetsefabalik/cookie-helper";
+import { createCookie } from "@mehmetsefabalik/cookie-helper";
 import { difficulties } from "../constants";
 import Dropdown from "../components/Dropdown";
-import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import { Link } from "react-router-dom";
+import trivia from "../styles/trivia.png";
 
 const Welcome = () => {
   const [categories, setCategories] = useState([]);
@@ -32,23 +33,23 @@ const Welcome = () => {
 
   return (
     <Fragment>
-      <Dropdown items={categories} onSelect={onCategorySelect} />
+      <div className="row justify-content-center ">
+        <Dropdown items={categories} onSelect={onCategorySelect} />
+      </div>
       <hr />
-
-      <Dropdown items={difficulties} onSelect={onDifficultySelect} />
+      <div className="row justify-content-center">
+        <Dropdown items={difficulties} onSelect={onDifficultySelect} />
+      </div>
       <Link to="/question">
-        <button className="btn btn-warning btn-lg  font-weight-bold col-12 text-light z-index:1">
-          GET STARTED
-        </button>
+        <div className="button">
+          <div className="row justify-content-center">
+            <button className=" col-lg-3 btn btn-warning btn-lg font-weight-bold text-light ">
+              PLAY
+            </button>
+          </div>
+        </div>
       </Link>
-      <img
-        className=" img"
-        src={`https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQO4au_qTfFmfxlN0R4IXCYP1UjFaW9oI5t6tHUruMlBybdq4ZkQA&s`}
-      />
-      <img
-        className=" img-1"
-        src={`https://www.triviacrack2.com/img/chara-pop.png`}
-      />
+      <img className="img" src={trivia} />
     </Fragment>
   );
 };
