@@ -16,4 +16,4 @@ export const difficulties = [
 export const answerType = {
   wrong: 0,
   correct: 1
-}
+};

@@ -1,8 +1,5 @@
-import React, { useState } from "react";
+import React from "react";
 import { answerType } from "../constants";
-import { BrowserRouter as Link } from "react-router-dom";
-import UnSuccessful from "../pages/UnSuccessful";
-
 
 const Query = ({ question, correct_answer, incorrect_answers, onSelect }) => {
   function getRandomInt(max) {
@@ -14,11 +11,10 @@ const Query = ({ question, correct_answer, incorrect_answers, onSelect }) => {
       <div key={correct_answer}>
         <br />
         <button
-          className="btn btn-secondary btn-lg"
+          className="btn btn-secondary col-sm-4"
           onClick={() => onSelect(answerType.correct)}
-        >
-       doğru  {correct_answer}
-        </button>
+          dangerouslySetInnerHTML={{ __html: correct_answer }}
+        ></button>
         <br />
       </div>
     )
@@ -31,11 +27,10 @@ const Query = ({ question, correct_answer, incorrect_answers, onSelect }) => {
           <div key={incorrect_answer}>
             <br />
             <button
-              className="btn btn-secondary btn-lg"
+              className="btn btn-secondary col-sm-4"
               onClick={() => onSelect(answerType.wrong)}
-            >
-              {incorrect_answer}
-            </button>
+              dangerouslySetInnerHTML={{ __html: incorrect_answer }}
+            ></button>
             <br />
           </div>
         )
@@ -62,6 +57,7 @@ const Query = ({ question, correct_answer, incorrect_answers, onSelect }) => {
       <img
         className="question-img"
         src={`https://appstickers-cdn.appadvice.com/651510680/833372507/0ef2d08540c3ad11c36777eb8b045ed6-9.png`}
+        alt=""
       />
       <div className="text-center">
         <div className="form-group">
