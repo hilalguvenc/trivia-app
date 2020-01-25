@@ -3,6 +3,7 @@ import { answerType } from "../constants";
 import { BrowserRouter as Link } from "react-router-dom";
 import UnSuccessful from "../pages/UnSuccessful";
 
+
 const Query = ({ question, correct_answer, incorrect_answers, onSelect }) => {
   function getRandomInt(max) {
     return Math.floor(Math.random() * Math.floor(max));
@@ -16,7 +17,7 @@ const Query = ({ question, correct_answer, incorrect_answers, onSelect }) => {
           className="btn btn-secondary btn-lg"
           onClick={() => onSelect(answerType.correct)}
         >
-          {correct_answer}
+       doğru  {correct_answer}
         </button>
         <br />
       </div>
@@ -59,10 +60,9 @@ const Query = ({ question, correct_answer, incorrect_answers, onSelect }) => {
   return (
     <div>
       <img
-        className="img-1"
+        className="question-img"
         src={`https://appstickers-cdn.appadvice.com/651510680/833372507/0ef2d08540c3ad11c36777eb8b045ed6-9.png`}
       />
-
       <div className="text-center">
         <div className="form-group">
           <li

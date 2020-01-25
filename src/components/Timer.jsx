@@ -5,17 +5,19 @@ import { withRouter } from "react-router-dom";
       constructor(props){
       super(props);
       this.state = {
-      seconds: 15
+      seconds: 15,
+      totalscore : 0
     }
   };
   componentDidMount() {
     this.myInterval = setInterval(() => {
-      const { seconds } = this.state;
+      const { seconds, counter } = this.state;
 
       if (seconds === 0) {
-          clearInterval(this.myInterval);
+          clearInterval(this.myInterval); 
         } else {
-          this.setState(({ seconds }) => ({
+          this.setState(({ seconds,totalscore}) => ({
+            totalscore: seconds +1,
             seconds: seconds - 1
           }));
         }
@@ -24,16 +26,19 @@ import { withRouter } from "react-router-dom";
     componentWillUnmount() {
     clearInterval(this.myInterval);
   }
-
   render() {
-    const { seconds } = this.state
+    const { seconds, totalscore} = this.state
     return (
       <div>
         {seconds === 0 
          ?  this.props.history.push('/timesup')
-         : <h1 className="timesup-content"> Time Remaining :{seconds < 10 ? `0${seconds}` : seconds}</h1>
+         : <div>
+           <h1 className="timer-content"> Time Remaining :{seconds < 10 ? `0${seconds}` : seconds}</h1>
+           </div>
         }
       </div>
+
+
     
     );
       }

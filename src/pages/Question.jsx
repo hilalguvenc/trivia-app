@@ -32,7 +32,7 @@ const Question = props => {
         props.history.push("/success");
       }
       setIndex(index + 1);
-      setActiveQuestion(questions[index + 1]);
+      setActiveQuestion(questions[index + 1])
     } else {
       console.log("wrong answer");
       props.history.push("/unsuccessful");
@@ -40,7 +40,7 @@ const Question = props => {
   };
   return (
     <div>
-      <Timer />
+     <Timer/>
       {activeQuestion &&
         Array.isArray(activeQuestion.incorrect_answers) &&
         activeQuestion.incorrect_answers.length && (

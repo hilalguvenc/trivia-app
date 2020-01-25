@@ -49,7 +49,7 @@ const Welcome = () => {
           </div>
         </div>
       </Link>
-      <img className="img" src={trivia} />
+      <img className="trivia-img" src={trivia} />
     </Fragment>
   );
 };

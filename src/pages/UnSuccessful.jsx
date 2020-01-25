@@ -1,12 +1,13 @@
 import React from "react";
 
+
 const UnSuccessful = () => {
   return (
     <div>
-      <img
+      <img className="unsuccessful-img"
         src={`https://appstickers-cdn.appadvice.com/651510680/833372507/3c5b04f1d6bfbc79c81a22a08bd3b1c2-4.png`}
       />
-      <h6 className="game-over">GAME OVER</h6>
+      <h6 className="unsuccessful-content">GAME OVER</h6>
     </div>
   );
 };
