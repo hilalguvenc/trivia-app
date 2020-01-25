@@ -19,6 +19,11 @@
   left: 30%;
   top: 2%;
 }
+.timesup-img {
+  position: absolute;
+  left: 7%;
+  top: 2%;
+}
 .winner-content {
   position: absolute;
   border: hotpink;
@@ -38,7 +43,7 @@
 
 .game-over {
   position: absolute;
-  border:rgba(255, 0, 0, 0.87);
+  border: rgba(255, 0, 0, 0.87);
   padding: 30px;
   width: 230px;
   text-align: center;
@@ -51,12 +56,11 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   top: 30%;
   left: 453px;
-  
 }
-.timer{
+.timer {
   position: absolute;
   position: absolute;
-  border:rgba(255, 0, 0, 0.87);
+  border: rgba(255, 0, 0, 0.87);
   padding: 30px;
   width: 230px;
   text-align: center;
@@ -69,6 +73,37 @@
   font-family: Verdana, Geneva, Tahoma, sans-serif;
   top: 30%;
   left: 453px;
+}
+.timesup {
+  position: absolute;
+  position: absolute;
+  border: rgba(0, 0, 255, 0.699);
+  padding: 30px;
+  width: 230px;
+  text-align: center;
+  margin: 40px;
+  border-radius: 20px;
+  background-color: rgba(0, 0, 255, 0.699);
+  color: white;
+  font: larger;
+  font-weight: 100px;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+  top: 30%;
+  left: 500px;
+}
+.timesup-content {
+  border: grey;
+  border-radius: 20px;
+  background-color: grey;
+  color: white;
+  padding: 5px;
+  margin: 5px;
+  width: 180px;
+  height: 30px;
+  font-size: 15px;
+  position: relative;
+  text-align: center;
+  left: 0px;
 }
 
 @media only screen and (min-width: 600px) {

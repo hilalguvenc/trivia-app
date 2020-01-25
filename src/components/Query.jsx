@@ -2,7 +2,6 @@ import React, { useState } from "react";
 import { answerType } from "../constants";
 import { BrowserRouter as Link } from "react-router-dom";
 import UnSuccessful from "../pages/UnSuccessful";
-import Timer from "../components/Timer";
 
 const Query = ({ question, correct_answer, incorrect_answers, onSelect }) => {
   function getRandomInt(max) {

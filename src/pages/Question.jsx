@@ -3,6 +3,7 @@ import Query from "../components/Query";
 import { difficulties, answerType } from "../constants";
 import { readCookie } from "@mehmetsefabalik/cookie-helper/dist";
 import { withRouter } from "react-router-dom";
+import Timer from "../components/Timer";
 
 const Question = props => {
   const [questions, setQuestions] = useState([]);
@@ -39,6 +40,7 @@ const Question = props => {
   };
   return (
     <div>
+      <Timer />
       {activeQuestion &&
         Array.isArray(activeQuestion.incorrect_answers) &&
         activeQuestion.incorrect_answers.length && (

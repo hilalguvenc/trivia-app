@@ -5,6 +5,7 @@ import Question from "./pages/Question";
 import Welcome from "./pages/Welcome";
 import Success from "./pages/Success";
 import UnSuccessful from "./pages/UnSuccessful";
+import TimesUp from "./pages/TimesUp";
 
 const App = () => {
   return (
@@ -18,10 +19,13 @@ const App = () => {
             <Question />
           </Route>
           <Route exact path="/success">
-          <Success />
+            <Success />
           </Route>
           <Route exact path="/unsuccessful">
-          <UnSuccessful />
+            <UnSuccessful />
+          </Route>
+          <Route exact path="/timesup">
+            <TimesUp />
           </Route>
         </Switch>
       </Router>
