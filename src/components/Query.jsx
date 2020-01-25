@@ -44,9 +44,6 @@ const Query = ({ question, correct_answer, incorrect_answers, onSelect }) => {
     const correctAnswer = getCorrectAnswer();
 
     const answers = getIncorrectAnswers();
-    console.log("rand", rand);
-    console.log("correctAnswer", correctAnswer);
-    console.log("incorrectAnswers", answers);
 
     answers.splice(rand, 0, correctAnswer);
     return answers;

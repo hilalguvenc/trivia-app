@@ -10,11 +10,9 @@ const Welcome = () => {
 
   const onCategorySelect = categoryId => {
     createCookie("selectedCategory", categoryId);
-    console.log("clicked category: id: ", categoryId);
   };
 
   const onDifficultySelect = difficultyId => {
-    console.log("clicked difficulty: id: ", difficultyId);
     createCookie("selectedDifficulty", difficultyId);
   };
 
@@ -23,7 +21,6 @@ const Welcome = () => {
     const data = await response.json();
     if (data && Array.isArray(data.trivia_categories)) {
       setCategories(data.trivia_categories);
-      console.log(data.trivia_categories);
     }
   };
 

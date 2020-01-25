@@ -8,11 +8,9 @@ const Timer = props => {
   useEffect(() => {
     if (seconds > 0) {
       interval = setInterval(async () => {
-        console.log("in interval");
         setSeconds(seconds - 1);
       }, 1000);
       return () => {
-        console.log("clearing interval");
         clearInterval(interval);
       };
     }
@@ -20,12 +18,9 @@ const Timer = props => {
   useEffect(() => {
     if (!props.index) return;
     const score = readCookie("score");
-    console.log("score", score);
     if (score) {
-      console.log("if score", Number(score) + Number(seconds));
       createCookie("score", Number(score) + Number(seconds));
     } else {
-      console.log("else", seconds);
       createCookie("score", seconds);
     }
     setSeconds(15);

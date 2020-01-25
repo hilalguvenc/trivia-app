@@ -20,7 +20,6 @@ const Question = props => {
     const data_q = await response.json();
     setQuestions(data_q.results);
     setActiveQuestion(data_q.results[0]);
-    console.log(data_q.results);
   };
   useEffect(() => {
     getQuestions();
@@ -28,14 +27,12 @@ const Question = props => {
 
   const onselectedAnswer = answer => {
     if (answer === answerType.correct) {
-      console.log("correct answer");
       if (index === 9) {
         props.history.push("/success");
       }
       setIndex(index + 1);
       setActiveQuestion(questions[index + 1]);
     } else {
-      console.log("wrong answer");
       props.history.push("/unsuccessful");
     }
   };
