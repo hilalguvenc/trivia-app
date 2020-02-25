@@ -2,4 +2,4 @@
 
 #### Deployment
 
-This section has moved here: 
+This section has moved here: https://trivia-app-react-project.netlify.com/
