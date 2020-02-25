@@ -9,4 +9,4 @@ In this task, a multiple choice quiz game was created with React.js using Open T
 
 #### Deployment
 
-This section has moved here: https://trivia-app-react-project.netlify.com/
+ https://trivia-app-react-project.netlify.com/
